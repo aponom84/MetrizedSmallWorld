@@ -32,6 +32,8 @@ The second major property is a decentralization which means that all the algorit
 Also, all the data elements in the structure are the same rank - there is no central or root element.
 So, high scalability both with size and data dimensionality and the distributed nature of the algorithm are a good base for building many real-world distributed 
 similarity search applications.
+Currently the MSW method is a part of the [Non-Metric Space Library](https://github.com/searchivarius/NonMetricSpaceLib).
+This library can be used to compare MSW algorithms with many others.
 
 WHAT SHOULD I DO TO RUN EXAMPLE?
 
