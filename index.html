@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Metrized Small World : Java implementation of the Metrized Small World data structure">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Metrized Small World</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/aponom84/MetrizedSmallWorld">View on GitHub</a>
+
+          <h1 id="project_title">Metrized Small World</h1>
+          <h2 id="project_tagline">Java implementation of the Metrized Small World data structure</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/aponom84/MetrizedSmallWorld/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/aponom84/MetrizedSmallWorld/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="metrized-small-world" class="anchor" href="#metrized-small-world" aria-hidden="true"><span class="octicon octicon-link"></span></a>Metrized Small World</h1>
+
+<p>This is java implementation of the Metrized Small World data structure (MSW). 
+MSW is a highly scalable data structure for approximate nearest neighbor search (ann) in arbitrary metric space. 
+MSW demonstrate ability to scale logarithmically both on the size of data (number of records) and the number dimensions.
+The approximation is defined in terms of probability. This means that the search algorithm may return the true nearest neighbor element to the query with some given probability (for example 95%), if not, most likely it will be the second closest and so on with sharply decreasing probability. 
+The algorithm requires a linear(n)*poly(d) space and the expected algorithms complexity is as follows:</p>
+
+<ul>
+<li>insertion of one element into the structure ~log(n)* d^1.7 (  log(n)*poly(d)  );</li>
+<li>approximate nearest neighbor search ~log(n)* d^1.7;</li>
+<li>approximate k-nearest neighbor search ~k*log(n) * d^1.7;</li>
+<li>deletion – not described yet, but supposedly complexity will be ~log(n) and poly(d).</li>
+</ul>
+
+<p>MSW has topology of the network constructed in such way, that starting from any node of the network, one can efficiently find any other node 
+without the entire knowledge of network topology.</p>
+
+<p>Also, the present code intended to demonstrate how a huge set of network nodes can efficiently communicate and find each other. 
+The search process based on the wide class of the distance functions (in contrast with DHT). 
+This makes it possible to apply MSW's algorithms for many real application which needs complex search and require a distributed architecture. </p>
+
+<p>The list of papers related to the MSW presented below</p>
+
+<ul>
+<li>Ponomarenko, A., Malkov, Y., Logvinov, A., &amp; Krylov, V. published at ICTA 2011 proceedings. <a href="http://www.iiis.org/CDs2011/CD2011IDI/ICTA_2011/Abstract.asp?myurl=CT175ON.pdf">Approximate Nearest Neighbor Search Small World Approach</a>
+</li>
+<li>Malkov, Y., Ponomarenko, A., Logvinov, A., &amp; Krylov, V. presented at SISAP 2012. <a href="http://link.springer.com/chapter/10.1007/978-3-642-32153-5_10">Scalable distributed algorithm for approximate nearest neighbor search problem in high dimensional general metric spaces</a>
+</li>
+<li>Ponomarenko, A., Averlin, N., Bilegsaikhan, N., Boytsov, L., 2014. <a href="http://boytsov.info/pubs/da2014.pdf">Comparative Analysis of Data Structures for Approximate Nearest Neighbor Search.</a> <a href="http://scholar.google.com/scholar.bib?q=info:yOjNiT2Ql4AJ:scholar.google.com/&amp;output=citation&amp;hl=en&amp;ct=citation&amp;cd=0"><strong>[BibTex]</strong></a>
+</li>
+<li>Malkov, Y., Ponomarenko, A., Logvinov, A., &amp; Krylov, V. 2014. Information Systems, 45, 61-68. [Approximate nearest neighbor algorithm based on navigable small world graphs (<a href="http://www.sciencedirect.com/science/article/pii/S0306437913001300">http://www.sciencedirect.com/science/article/pii/S0306437913001300</a>)</li>
+<li>Malkov, Y. A. 2015. preprint. <a href="http://arxiv.org/abs/1507.06529">Growing homophilic networks are natural optimal navigable small worlds</a>
+</li>
+</ul>
+
+<p>WHY METRIZED SMALL WORLD IS BETTER THAN OTHER APPROXIMATE NEAREST NEIGHBOR DATA STRUCTURES?</p>
+
+<p>The first a good property of this data structure is a resistance to the <a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality">curse of dimensionality</a>.<br>
+The second major property is a decentralization which means that all the algorithms use only local information on each step and can be initiated from any vertex. 
+Also, all the data elements in the structure are the same rank - there is no central or root element.
+So, high scalability both with size and data dimensionality and the distributed nature of the algorithm are a good base for building many real-world distributed 
+similarity search applications.
+Currently the MSW method is a part of the <a href="https://github.com/searchivarius/NonMetricSpaceLib">Non-Metric Space Library</a>.
+This library can be used to compare MSW algorithms with many others.</p>
+
+<h2>
+<a id="what-should-i-do-to-run-example" class="anchor" href="#what-should-i-do-to-run-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>What Should I Do to Run Example?</h2>
+
+<h3>
+<a id="compile-source-code" class="anchor" href="#compile-source-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compile Source Code</h3>
+
+<p>You can use apache ant <a href="http://ant.apache.org/">http://ant.apache.org/</a> and type “ant” from the common line in the folder where “build.xml” file is located. 
+Or you can open and compile project with <a href="http://netbeans.org">NetBeans</a></p>
+
+<h3>
+<a id="run-example" class="anchor" href="#run-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Run Example</h3>
+
+<p>Run testTrec3.bat at the Windows or testTrec3.sh at the Linux machine.
+The list of parameters used in the example class “SearchAttemptsTestTrec3”:</p>
+
+<ol>
+<li>(NN) The number of nearest neighbors used in construction algorithm to approximate Voronoi neighbors</li>
+<li>(K) number of k-closest elements for the k-nn search</li>
+<li>(initAttempts) - number of search attempts used during the construction of the structure</li>
+<li>(minAttempts) - minimum number of attempts which will be uses during the test search</li>
+<li>(maxAttempts) - maximum number of attempts</li>
+<li>(dataBaseSize) - the restriction of number elements in the data structure. To remove the restriction, set the value to 0.</li>
+<li>(querySetSize) - the restriction on the number of all possible queries. Set to 0 for unlimited number of queries.</li>
+<li>(testSeqSize) - the number elements in a randomly selected subset used to verify accuracy of the search. </li>
+<li>(dataPath) – the path to the directory containing the set frequency term vectors extracted from the set of documents.</li>
+<li>(queryPath) – the path to the set of frequency term vectors used as a set of all possible queries.</li>
+</ol>
+
+<p>Note that the example uses the Trec-3 data set as the part of <a href="http://sisap.org/Metric_Space_Library.html">Metric Space Library</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Metrized Small World maintained by <a href="https://github.com/aponom84">aponom84</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
