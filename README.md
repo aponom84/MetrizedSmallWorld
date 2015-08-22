@@ -35,24 +35,25 @@ similarity search applications.
 Currently the MSW method is a part of the [Non-Metric Space Library](https://github.com/searchivarius/NonMetricSpaceLib).
 This library can be used to compare MSW algorithms with many others.
 
-WHAT SHOULD I DO TO RUN EXAMPLE?
+## What Should I Do to Run Example?
 
-COMPILE SOURCE CODE
+### Compile Source Code
 You can use apache ant http://ant.apache.org/ and type “ant” from the common line in the folder where “build.xml” file is located. 
 Or you can open and compile project with [NetBeans](http://netbeans.org)
 
-RUN EXAMPLE
+### Run Example
 Run testTrec3.bat at the Windows or testTrec3.sh at the Linux machine.
 The list of parameters used in the example class “SearchAttemptsTestTrec3”:
-1.	 (NN) The number of nearest neighbors used in construction algorithm to approximate Voronoi neighbors
-2.	(K) number of k-closest elements for the k-nn search
-3.	(initAttempts) - number of search attempts used during the construction of the structure
-4.	(minAttempts) - minimum number of attempts which will be uses during the test search
-5.	(maxAttempts) - maximum number of attempts
-6.	(dataBaseSize) - the restriction of number elements in the data structure. To remove the restriction, set the value to 0.
-7.	(querySetSize) - the restriction on the number of all possible queries. Set to 0 for unlimited number of queries.
-8.	(testSeqSize) - the number elements in a randomly selected subset used to verify accuracy of the search. 
-9.	(dataPath) – the path to the directory containing the set frequency term vectors extracted from the set of documents.
-10.	(queryPath) – the path to the set of frequency term vectors used as a set of all possible queries.
+
+1. (NN) The number of nearest neighbors used in construction algorithm to approximate Voronoi neighbors
+2. (K) number of k-closest elements for the k-nn search
+3. (initAttempts) - number of search attempts used during the construction of the structure
+4. (minAttempts) - minimum number of attempts which will be uses during the test search
+5. (maxAttempts) - maximum number of attempts
+6. (dataBaseSize) - the restriction of number elements in the data structure. To remove the restriction, set the value to 0.
+7. (querySetSize) - the restriction on the number of all possible queries. Set to 0 for unlimited number of queries.
+8. (testSeqSize) - the number elements in a randomly selected subset used to verify accuracy of the search. 
+9. (dataPath) – the path to the directory containing the set frequency term vectors extracted from the set of documents.
+10. (queryPath) – the path to the set of frequency term vectors used as a set of all possible queries.
 
 Note that the example uses the Trec-3 data set as the part of [Metric Space Library](http://sisap.org/Metric_Space_Library.html)
