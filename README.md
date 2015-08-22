@@ -1,6 +1,6 @@
 # MetrizedSmallWorld
 An open java implementation of the MetrizedSmallWorld data structure
-The Metrized Small World is a highly scalable data structure for the approximate nearest neighbor search in terms of both data size and data dimensionality dedicated to the approximate nearest neighbor search. 
+The Metrized Small World is a highly scalable data structure for the approximate nearest neighbor search. It scales logariphmicaly both on data size and data dimensionality.
 The Metrized Small World data structure was proposed by Alexander Ponomarenko, Yuri Malkov, Andrey Logvinov and Vladimir Krylov in the article “Approximate Nearest Neighbor Search Small World Approach” published in ICTA 2011 conference proceedings. A more  detailed description of the data structure is given in the article article “Scalable Distributed Algorithm for Approximate Nearest Neighbor Search Problem in High Dimensional General Metric Spaces” which was presented at SISAP 2012 conference.  
 
 WHAT IS IT FOR?
