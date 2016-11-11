@@ -245,7 +245,7 @@ public class WikiSparseTest {
                 if (answer.contains(ee)) good++;
             }
 
-            return new TestResult(good, result.getScanned(), result.getSteps(), result.getVisitedSet());
+            return new TestResult(good, result.getViewedList().size(), result.getVisitedSet().size(), result.getVisitedSet());
 
         }
     }

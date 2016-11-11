@@ -320,7 +320,7 @@ public class ReparingByQueriesTest {
         @Override
         public TestResult call() throws Exception {
             SearchResult result = db.knnSearch(testQ, k, attempts);
-            int mySteps = result.getSteps();
+            int mySteps = result.getVisitedSet().size();
             int good=0;
             for (EvaluatedElement ee: result.getViewedList()) {
                 if (answer.contains(ee)) good++;

@@ -80,7 +80,7 @@ public class AlgorithmLib {
    
  
         //TODO
-        return new SearchResult(null, null, 0);
+        return new SearchResult(null, null);
     }
     public static SearchResult aggregateSearch2(AbstractMetricStructure db, MetricElement query, int attempts, int exactNumberOfAnswers, MaskValidator maskValidator) {
         int foundAnswers = 0;
@@ -187,13 +187,11 @@ public class AlgorithmLib {
     
     public static SearchResult searchElementSearchResult(MetricElement toFound, MetricElement newEnterPoint) {
         MetricElement curElement=newEnterPoint,newElement;
-        int step = 0;
         TreeSet <EvaluatedElement> viewed = new TreeSet();
         Set <MetricElement> visitedSet = new HashSet();
         viewed.add(new EvaluatedElement(toFound.calcDistance(newEnterPoint),newEnterPoint));
 
         while(true){
-            step++;
             viewed.addAll(curElement.getClosestElemetSearchResult(toFound).getViewedList());
             visitedSet.add(curElement);
             
@@ -203,7 +201,7 @@ public class AlgorithmLib {
                 break;
             curElement=newElement;
         }
-        return new SearchResult(viewed, visitedSet, 0);
+        return new SearchResult(viewed, visitedSet);
     }
     
     /**
@@ -257,7 +255,7 @@ public class AlgorithmLib {
                 }
             }
         }
-        return new SearchResult(viewedSet, visitedSet,0);
+        return new SearchResult(viewedSet, visitedSet);
     }
 
     /**
@@ -287,7 +285,7 @@ public class AlgorithmLib {
 
        // System.out.println("Global viewed set size = " + globalViewedSet.size());
         //SearchResult sr 
-        return new SearchResult(globalViewedSet, visitedSet, globalViewedHashSet.size());
+        return new SearchResult(globalViewedSet, visitedSet);
     }
     
     /**
@@ -327,7 +325,7 @@ public class AlgorithmLib {
         
         
         
-        return new SearchResult(new TreeSet(globalViewedSet), null, 0);
+        return new SearchResult(new TreeSet(globalViewedSet), null);
     }
     
      /**
@@ -357,7 +355,7 @@ public class AlgorithmLib {
                 globalViewedSet.addAll(sr.getViewedList());
                 visitedSet.addAll(sr.getVisitedSet());
                 //check for correct
-                steps = steps + sr.getSteps();
+                steps = steps + sr.getVisitedSet().size();
                 
             } catch (InterruptedException ex) {
                 throw new Error(ex);
@@ -368,7 +366,7 @@ public class AlgorithmLib {
         
         executor.shutdown();
 
-        return new SearchResult(new TreeSet(globalViewedSet), visitedSet, 0);
+        return new SearchResult(new TreeSet(globalViewedSet), visitedSet);
     }
 
     private static double getKDistance(SortedSet <EvaluatedElement> treeSet, int k) {
@@ -430,7 +428,7 @@ public class AlgorithmLib {
             set.addAll(sr.getViewedList());
             visitedSet.addAll(sr.getVisitedSet());
         }
-        return new SearchResult(set, visitedSet, 0);
+        return new SearchResult(set, visitedSet);
     }
 
     public static MetricElement getLocalMin(MetricElement start, MetricElement query) {
@@ -615,7 +613,7 @@ public class AlgorithmLib {
 
                 //MetricElement currElement = candidateSet.
             }
-            return new SearchResult(viewedSet, visitedSet,0);
+            return new SearchResult(viewedSet, visitedSet);
         }
         
     }

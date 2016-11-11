@@ -74,7 +74,7 @@ public abstract class MetricElement {
             set.add(new EvaluatedElement(temp, friends.get(i)));
 
         }
-        return new SearchResult(set, null, 0);
+        return new SearchResult(set, null);
     }
 
     public synchronized void addFriend(MetricElement de) {

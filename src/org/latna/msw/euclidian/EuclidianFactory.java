@@ -8,12 +8,13 @@ import org.latna.msw.MetricElementFactory;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.function.Supplier;
 
 /**
  *
  * @author aponom
  */
-public class EuclidianFactory implements MetricElementFactory {
+public class EuclidianFactory implements MetricElementFactory, Supplier<MetricElement>  {
     
     private int dimension; 
     private int n; //number of elements
@@ -21,6 +22,16 @@ public class EuclidianFactory implements MetricElementFactory {
     private static Random random =  new Random();
 
     public List<MetricElement> getElements() {
+        allElements = new ArrayList(n);
+        
+        for (int i=0; i < n; i++) {
+            double x[] = new double[dimension];
+            for (int j=0; j < dimension; j++) {
+                x[j] = random.nextDouble();
+            }
+            
+            allElements.add(new Euclidean(x));
+        }
         return allElements;
     }
 
@@ -38,19 +49,6 @@ public class EuclidianFactory implements MetricElementFactory {
     public EuclidianFactory(int dimension, int n) {
         this.dimension = dimension;
         this.n = n;
-        //Random random = new Random();
-        
-        allElements = new ArrayList(n);
-        
-        for (int i=0; i < n; i++) {
-            double x[] = new double[dimension];
-            for (int j=0; j < dimension; j++) {
-                x[j] = random.nextDouble();
-            }
-            
-            allElements.add(new Euclidean(x));
-        }
-        
     }
     
     public static MetricElement getRandomElement(int dimension) {
@@ -64,7 +62,6 @@ public class EuclidianFactory implements MetricElementFactory {
     public EuclidianFactory(int dimension, int n, double standardDeviation) {
         this.dimension = dimension;
         this.n = n;
-       
         
         RandomEngine engine = new DRand();
         Normal normal = new Normal(0, standardDeviation, engine);
@@ -77,13 +74,21 @@ public class EuclidianFactory implements MetricElementFactory {
                 x[j] = normal.nextDouble();
             }
             
-            allElements.add(new Euclidean(x));
+            allElements.add(new Euclidean(x)); 
         }
-        
     }
     
     
     public int getDimension() {
         return dimension;
+    }
+
+    @Override
+    public MetricElement get() {
+        double x[] = new double[dimension];
+        for (int j=0; j < dimension; j++) {
+            x[j] = random.nextDouble();
+        }
+        return new Euclidean(x);
     }
 }

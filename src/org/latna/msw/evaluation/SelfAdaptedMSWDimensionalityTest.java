@@ -99,7 +99,7 @@ public class SelfAdaptedMSWDimensionalityTest {
                 //executorAdder.submit(new Adding(db, me, elementNumber));
                 //elementNumber++;
                 db.add(me);
-                //System.out.println("Number of links added: " + me.getAllFriends().size());
+                //System.out.println("Number of links added: " + me.getAllF>riends().size());
             }
              
             //shutdownAndAwaitTermination(executorAdder);
@@ -234,7 +234,7 @@ public class SelfAdaptedMSWDimensionalityTest {
         @Override
         public TestResult call() throws Exception {
             SearchResult result = db.knnSearch(testQ, k, attempts);
-            int mySteps = result.getSteps();
+            int mySteps = result.getVisitedSet().size();
             int good=0;
             for (EvaluatedElement ee: result.getViewedList()) {
                 if (answer.contains(ee)) good++;

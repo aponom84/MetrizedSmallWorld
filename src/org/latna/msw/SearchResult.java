@@ -9,29 +9,14 @@ import java.util.TreeSet;
  */
 public class SearchResult {
     private TreeSet <EvaluatedElement> viewedList;
-    private int steps;
-    private int scanned;
     private Set <MetricElement> visitedSet;
     
 
-    public SearchResult(TreeSet <EvaluatedElement> viewedList, Set <MetricElement> visetedSet, int scanned) {
+    public SearchResult(TreeSet <EvaluatedElement> viewedList, Set <MetricElement> visetedSet) {
         this.viewedList = viewedList;
-        this.steps = steps;
-        this.scanned = scanned;
         this.visitedSet = visetedSet;
     }
 
-    public int getSteps() {
-        return steps;
-    }
-
-    public void setSteps(int steps) {
-        this.steps = steps;
-    }
-    
-    public int getScanned() {
-        return scanned;
-    }
 
     public TreeSet<EvaluatedElement> getViewedList() {
         return viewedList;

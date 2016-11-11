@@ -75,7 +75,6 @@ public class SelfAdaptedMetrizedSmallWorld extends AbstractMetricStructure{
         } catch (Throwable ex) {
            ex.printStackTrace(); 
         }
-        
     }
 
     @Override

@@ -4,13 +4,24 @@ package org.latna.msw;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.Vector;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.stream.Stream;
+import org.latna.msw.euclidian.EuclidianFactory;
 
 /**
  * Methods for data structure testing and analyzing  
@@ -19,26 +30,37 @@ import java.util.concurrent.TimeUnit;
 public class TestLib {
     public static boolean IfGraphFallToTwoComponents(List<MetricElement> allElements)
     {
+        return getNumberOfConnectedComponents(allElements) > 1 ;
+    }
+    
+    public static int getNumberOfConnectedComponents(List<MetricElement> allElements) {
+        int componentNumber = 0;
+        
+        Set <MetricElement> notUsed  = new HashSet<>(allElements);
+        
         ArrayDeque<MetricElement> aQueue = new ArrayDeque<MetricElement>();
-        Set <MetricElement> markedElements = new HashSet <MetricElement>(allElements.size());
-        aQueue.add(allElements.get(0));
-        markedElements.add(allElements.get(0));
 
-        while(!aQueue.isEmpty())
-        {
-            MetricElement currentV = aQueue.remove();
-
-            if(!currentV.getAllFriends().isEmpty())
-                for(MetricElement element : currentV.getAllFriends())
-                    if(!markedElements.contains(element))
-                    {
-                        aQueue.add(element);
-                        markedElements.add(element);
-                    }
+        while (!notUsed.isEmpty()) {
+            componentNumber++;
+            MetricElement e = notUsed.iterator().next();
+            aQueue.add(e);
+            while(!aQueue.isEmpty())
+            {
+                MetricElement currentV = aQueue.remove();
+                notUsed.remove(currentV);
+                if(!currentV.getAllFriends().isEmpty())
+                    for(MetricElement element : currentV.getAllFriends())
+                        if(notUsed.contains(element))
+                        {
+                            aQueue.add(element);
+                            notUsed.remove(element);
+                        }
+            }
         }
 
-        return allElements.size() > markedElements.size();
+        return componentNumber;    
     }
+    
      public static int getNumeberOfCloserElements(List <MetricElement> allelements, MetricElement tofound,double distance){
         int num=0;
         for(int i=0;i<allelements.size();i++){
@@ -109,16 +131,22 @@ public class TestLib {
     }
     
     public static double getAvgClusteringCoeff(List <MetricElement> allElements)  {
-        double sum = 0;
-        for (MetricElement e: allElements) {
-            sum = sum + getLocalClusteringCoeff(e);
-        }
-        
+        double sum;
+        /*for (MetricElement e: allElements) {
+        sum = sum + getLocalClusteringCoeff(e);
+        }*/
+        //allElements.stream().filter(e->!e.getAllFriends().isEmpty()).mapToDouble(e->getLocalClusteringCoeff(e)).sum();
+        sum = allElements.stream().mapToDouble(e->getLocalClusteringCoeff(e)).sum();
+        /*    sum = sum + getLocalClusteringCoeff(e);
+                    });*/
+            
         return sum / ((double) allElements.size());
     } 
     
     public static double getLocalClusteringCoeff(MetricElement e) {
-        if (  e.getAllFriends().isEmpty()  || ( e.getAllFriends().size() == 1)  ) 
+        if (e.getAllFriends().isEmpty()) 
+            return 0.0;
+        if (  e.getAllFriends().size() == 1)  
             return 1.0;
         
         double localClustering = 0;
@@ -129,11 +157,11 @@ public class TestLib {
                 }
             }
         }
-        
+       /* 
         if (localClustering < 0.01 ) {
             System.out.println(" Kaka");
         }
-        
+        */
         localClustering = localClustering / (2.0 * (double) combination(e.getAllFriends().size(), 2));
         return localClustering;
     };
@@ -218,20 +246,42 @@ public class TestLib {
         return maxDegree;
     }
     
+    /**
+     * Calculates the degree distribution of vertices and saves it to the file with name {@code fileName}
+     * @param fileName the name of the output file
+     * @param db an abstract graph structure
+     * @throws IOException 
+     */
     public static void saveStatisticToFile(String fileName, AbstractMetricStructure db) throws IOException { 
         FileWriter fw = new FileWriter(fileName, true);
-        
+        saveStatisticToFile(fw, db);
+    }
+    
+    /**
+     * Calculates the degree distribution of vertices and saves it using {@code FileWriter fw}
+     * @param fw the output FileWriter
+     * @param db an abstract graph structure
+     * @throws IOException 
+     */
+    public static void saveStatisticToFile(FileWriter fw, AbstractMetricStructure db) throws IOException { 
         fw.append("Algorithm:\t" + db.toString() + "\n");
+        fw.append("Degree;Fraction;\n");
         int linkNumber = 0;
         int degreeDistribution[] = getDegreeDistribution(db.getElements());
         for (int degree = 1; degree < degreeDistribution.length; degree++) {
             if (degreeDistribution[degree] > 0) 
-                fw.append(String.valueOf(degree) + "\t" + String.valueOf(degreeDistribution[degree]) + "\n");
+                fw.append(String.valueOf(degree) + ";" + String.valueOf(degreeDistribution[degree]) + "\n");
             linkNumber = linkNumber + degree*degreeDistribution[degree];
         }
-        fw.append("Total link number:\t" + String.valueOf(linkNumber/2)+ "\n");
+        fw.append("Total link number;" + String.valueOf(linkNumber/2)+ "\n");
         
-        fw.close();
+        
+        fw.append("AvgClusteringCoeff;" + TestLib.getAvgClusteringCoeff(db.getElements()) + "\n");
+        fw.append("Number of Connected Components;" + TestLib.getNumberOfConnectedComponents(db.getElements()) + "\n");
+        
+        //TestLib.
+        
+        fw.flush();
     }
     
     public static void shutdownAndAwaitTermination(ExecutorService pool) {
@@ -259,6 +309,132 @@ public class TestLib {
         fw.flush();
     }
     
+    public static Vector <Integer> getShortestPathDistribution(List<MetricElement> allElements) {
+
+        Vector <Integer> spDistribution = new Vector <Integer> ();
+        //allElements.parallelStream().forEach(s->{
+        allElements.stream().forEach(s->{
+            Map <MetricElement, Integer> sp  = getShortestPathValueMap(allElements, s);
+            //synchronized (spDistribution) {
+                for (Integer v: sp.values()) {
+                    spDistribution.add(v, spDistribution.get(v) + 1);
+              //  }
+            }
+        });
+        
+        return spDistribution;
+    };
+ /*
+    public static Object getRandomElement(List allElements) {
+        if (allElements.size() == 0) return null;
+        return allElements.get(random.nextInt(allElements.size()));
+    }
+   */
     
+    /**
+     * returns <query, List of search results> 
+    */
+    public static Map <MetricElement, List<EvaluationResult>> evaluateSearchAlgorithm(List<MetricElement> allElements, EuclidianFactory testQueryFactory, int numberOfQueries, int numberOfTries) {
+        ConcurrentHashMap <MetricElement, List <EvaluationResult>> result = new ConcurrentHashMap (numberOfTries);
+        
+        EnterPointProvider enterPointProvider = new EnterPointProvider(allElements);
+        //Stream <MetricElement> stream = Stream.generate(testQueryFactory);
+        //stream.parallel().forEach(q->{
+        //stream.limit(numberOfQueries).forEach(q->{
+        //testQueryFactory.getElements().parallelStream().forEach(q->{
+        testQueryFactory.getElements().stream().filter(Objects::nonNull).forEach(q-> {
+            List <EvaluationResult> results = new ArrayList();
+            TreeSet<EvaluatedElement> treeSet = TestLib.getKCorrectElements(allElements, q, 1);
+            EvaluatedElement globalOptima = treeSet.first();
+            for (int i = 0; i < numberOfTries; i++) {
+                MetricElement source = enterPointProvider.getRandomEnterPoint();
+                SearchResult sr = AlgorithmLib.searchElementSearchResult(q, source);
+                EvaluatedElement localMin = sr.getViewedList().first();
+                
+                Map <MetricElement, Integer> sp  = 
+                    getShortestPathValueMap(allElements, globalOptima.getMetricElement());
+                
+                results.add(new EvaluationResult(
+                        sp.getOrDefault(localMin.getMetricElement(), Integer.MAX_VALUE),
+                        localMin.getDistance() - globalOptima.getDistance() , 
+                        sr.getVisitedSet().size(), 
+                        sr.getViewedList().size()));
+            }
+            result.put(q, results);
+            
+        }); //TODO*/
+        
+       return result; 
+    }
+    
+    public static class EvaluationResult {
+        /**
+         * topological graph distance from local minimum to global minima 
+         */
+        public int graphDistance; 
+        /**
+         * the distance from local minimum to global minima with respect to the given distance function
+         */
+        public double metricDistance; 
+        
+        public int greedyWalkPathLenght;
+        
+        public int numberOfScanned;
+
+        public EvaluationResult(int graphDistance, double metricDistance, int greedyWalkPathLenght, int numberOfScanned) {
+            this.graphDistance = graphDistance;
+            this.metricDistance = metricDistance;
+            this.greedyWalkPathLenght = greedyWalkPathLenght;
+            this.numberOfScanned = numberOfScanned;
+        }
+    }
+    
+    /**
+     * @param allElements
+     * @param source - starting point
+     * @return the map of values of the shortest path between source and every element of allElements
+     */
+    public static Map <MetricElement, Integer> getShortestPathValueMap(List <MetricElement> allElements, MetricElement source) {
+        ArrayDeque<MetricElement> aQueue = new ArrayDeque<MetricElement>();
+        Map <MetricElement, Integer> spMap = new HashMap <MetricElement, Integer>(allElements.size());
+        aQueue.add(source);
+        spMap.put(source, 0);
+        
+        while(!aQueue.isEmpty())
+        {
+            MetricElement currentV = aQueue.remove();
+            int step = spMap.get(currentV);
+            if(!currentV.getAllFriends().isEmpty())
+                for(MetricElement element : currentV.getAllFriends())
+                    if(!spMap.containsKey(element))
+                    {
+                        aQueue.add(element);
+                        spMap.put(element, step+1); 
+                    }
+        }
+        return spMap;
+    }
+    
+    
+    /*
+    public static Fout getFout(FileWriter fw) {
+        return new Fout(fw);
+    }
+    */
+    public static class Fout {
+        private FileWriter fw;
+        public Fout(FileWriter writer) {
+            fw = writer;
+        }
+        
+        public void out(String msg) {
+            try {
+                fw.append(msg);
+                System.out.print(msg);
+            } catch (IOException ex) {
+                System.out.println(msg);
+            }
+        }
+    }
 
 }

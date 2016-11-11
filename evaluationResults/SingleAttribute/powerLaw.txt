@@ -1,0 +1,7 @@
+NN=4 dataBaseSize=1000 querySetSize=200 testSeqSize=100 K = 1	recall = 1.0	ScanedPercent = 0.10794999999999999	Avg Scanned	107.95000000000002	Avg Path	10.947500000000002
+NN=4 dataBaseSize=5000 querySetSize=200 testSeqSize=100 K = 1	recall = 1.0	ScanedPercent = 0.03683880000000001	Avg Scanned	184.194	Avg Path	13.9365
+NN=4 dataBaseSize=10000 querySetSize=200 testSeqSize=100 K = 1	recall = 1.0	ScanedPercent = 0.0221477	Avg Scanned	221.47700000000003	Avg Path	15.007499999999999
+NN=4 dataBaseSize=50000 querySetSize=200 testSeqSize=100 K = 1	recall = 1.0	ScanedPercent = 0.0064933099999999995	Avg Scanned	324.6655	Avg Path	17.916
+NN=4 dataBaseSize=100000 querySetSize=200 testSeqSize=100 K = 1	recall = 1.0	ScanedPercent = 0.0037321599999999996	Avg Scanned	373.21599999999995	Avg Path	19.204500000000003
+NN=4 dataBaseSize=500000 querySetSize=200 testSeqSize=100 K = 1	recall = 1.0	ScanedPercent = 0.001001865	Avg Scanned	500.93250000000006	Avg Path	21.860500000000002
+NN=4 dataBaseSize=1000000 querySetSize=200 testSeqSize=100 K = 1	recall = 1.0	ScanedPercent = 5.55445E-4	Avg Scanned	555.4449999999999	Avg Path	23.037499999999994

@@ -11,7 +11,7 @@ import java.util.Random;
  * @author Alexander Ponomarenko aponom84@gmail.com
  */
 public class EnterPointProvider {
-    private static int seed = 108;
+    //private static int seed = 108;
     private Random random;
     private List <MetricElement> allElements;
     /**
@@ -19,7 +19,7 @@ public class EnterPointProvider {
      */
     public EnterPointProvider (List <MetricElement> elements) {
         allElements = elements;
-        random = new Random(seed);
+        random = new Random();
     }
     /**
      * @return random selected element from the structure

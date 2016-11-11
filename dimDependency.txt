@@ -1,0 +1,34 @@
+nn = 7
+K = 5 Attepts = 1	recall = 0.09333333333333334	Scaned = 0.06690666666666667
+K = 5 Attepts = 2	recall = 0.24	Scaned = 0.10988333333333333
+K = 5 Attepts = 3	recall = 0.25333333333333335	Scaned = 0.13664
+K = 5 Attepts = 4	recall = 0.2733333333333333	Scaned = 0.17961
+K = 5 Attepts = 5	recall = 0.37333333333333335	Scaned = 0.18679666666666667
+K = 5 Attepts = 6	recall = 0.2866666666666667	Scaned = 0.22258666666666665
+K = 5 Attepts = 7	recall = 0.3466666666666667	Scaned = 0.22551666666666667
+K = 5 Attepts = 8	recall = 0.41333333333333333	Scaned = 0.23915
+K = 5 Attepts = 9	recall = 0.4533333333333333	Scaned = 0.2638
+K = 5 Attepts = 10	recall = 0.37333333333333335	Scaned = 0.27836
+
+
+
+NN=14K = 5 Attepts = 1	recall = 0.18	Scaned = 0.09536333333333333
+NN=14K = 5 Attepts = 2	recall = 0.37333333333333335	Scaned = 0.15820333333333333
+NN=14K = 5 Attepts = 3	recall = 0.43333333333333335	Scaned = 0.2109
+NN=14K = 5 Attepts = 4	recall = 0.46	Scaned = 0.23567333333333335
+NN=14K = 5 Attepts = 5	recall = 0.44	Scaned = 0.2590633333333333
+NN=14K = 5 Attepts = 6	recall = 0.48	Scaned = 0.29840333333333335
+NN=14K = 5 Attepts = 7	recall = 0.54	Scaned = 0.31593666666666664
+NN=14K = 5 Attepts = 8	recall = 0.5	Scaned = 0.3249166666666667
+NN=14K = 5 Attepts = 9	recall = 0.5266666666666666	Scaned = 0.35028
+NN=14K = 5 Attepts = 10	recall = 0.5666666666666667	Scaned = 0.3637166666666667
+NN=14K = 5 Attepts = 11	recall = 0.6133333333333333	Scaned = 0.37893
+NN=14K = 5 Attepts = 12	recall = 0.7	Scaned = 0.39770666666666665
+NN=14K = 5 Attepts = 13	recall = 0.6933333333333334	Scaned = 0.41108333333333336
+NN=14K = 5 Attepts = 14	recall = 0.6666666666666666	Scaned = 0.40746
+NN=14K = 5 Attepts = 15	recall = 0.6933333333333334	Scaned = 0.43481333333333333
+NN=14K = 5 Attepts = 16	recall = 0.7066666666666667	Scaned = 0.4514766666666667
+NN=14K = 5 Attepts = 17	recall = 0.68	Scaned = 0.45296333333333333
+NN=14K = 5 Attepts = 18	recall = 0.7333333333333333	Scaned = 0.47196
+NN=14K = 5 Attepts = 19	recall = 0.6933333333333334	Scaned = 0.48071
+NN=14K = 5 Attepts = 20	recall = 0.7133333333333334	Scaned = 0.49555333333333335

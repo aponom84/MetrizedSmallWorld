@@ -218,7 +218,7 @@ public class DimensionalityTest {
                 if (answer.contains(ee)) good++;
             }
 
-            return new TestResult(good, result.getViewedList().size(), result.getSteps(), result.getVisitedSet());
+            return new TestResult(good, result.getViewedList().size(), result.getVisitedSet().size(), result.getVisitedSet());
 
         }
     }

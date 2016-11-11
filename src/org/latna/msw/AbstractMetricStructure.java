@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.TreeSet;
 
 /**
- * An abstraction of the data structure which supports search in metric space and sequentially data addition
+ * An abstraction of data structure which supports searching in metric space and sequentially data addition
  * We assume that structure provides search with the multiple attempts which can be performed 
  * from random element (enter point) of the structure
  * @author Alexander Ponomarenko aponom84@gmail.com
@@ -25,7 +25,7 @@ public abstract class AbstractMetricStructure {
      * 
      * @return list of all elements in the structure
      */
-    public synchronized List<MetricElement> getElements() {
+    public synchronized List<MetricElement> getElements() {  
         return elements;
     }
     /**

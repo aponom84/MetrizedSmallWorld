@@ -1,6 +1,6 @@
+
 package org.latna.msw;
 
-import org.latna.msw.documents.DocumentFileFactory;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,33 +12,22 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-
+import org.latna.msw.euclidian.EuclidianFactory;
 /**
- * This is the simple example of building MetrizedSmallWorld under the trec-3 collection data set.
- * Any document or query is represented by term frequency vector.
- * The test is divided into the three stages.
- * 
- * The first stage - reading data set to the memory (documents and queries), configuring algorithms and building the data structure.   
- * 
- * The second stage - to obtain the true nearest neighbor element for every query by the use sequenteally scan
- * 
- * The third stage - search in the metric data structure with several number of attemps, 
- * validate the search ressults.
- * 
  * @author Alexander Ponomarenko aponom84@gmail.com
  */
-public class PowerLawTestTrec3 {
+public class PowerLawTestEuclidian {
     /**
      * Scans input string and runs the test
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         
-        int nn = 7; //number of nearest neighbors used in construction algorithm to approximate voronoi neighbor
+        int nn = 5; //number of nearest neighbors used in construction algorithm to approximate voronoi neighbor
         int k = 5; //number of k-closest elements for the knn search
         int initAttempts = 5; //number of search attempts used during the contruction of the structure
         int minAttempts = 1 ; //minimum number of attempts used during the test search 
-        int maxAttempts = 10; //maximum number of attempts 
+        int maxAttempts = 20; //maximum number of attempts 
   //      int dataBaseSize = 1000; 
         int dataBaseSize = 0; //the restriction on the number of elements in the data structure. To set no restriction set value = 0
         int querySetSize = 50; //the restriction on the number of quleries. To set no restriction set value = 0
@@ -64,13 +53,11 @@ public class PowerLawTestTrec3 {
 
         
 
-        MetricElementFactory elementFactory= new DocumentFileFactory();
-        elementFactory.setParameterString("dir="+dataPath+"; maxDoc="+dataBaseSize);
-        MetricElementFactory testQueryFactory = new DocumentFileFactory();
-        testQueryFactory.setParameterString("dir="+queryPath+"; maxDoc="+querySetSize);
+        MetricElementFactory elementFactory= new EuclidianFactory(2, 1000000);
+        MetricElementFactory testQueryFactory = new EuclidianFactory(2, 1000);
         ArrayList <MetricElement> testQueries = new ArrayList();
 
-        MetrizedSmallWorld db = new MetrizedSmallWorld();
+        MetrizedSmallWorld_PowerLaw db = new MetrizedSmallWorld_PowerLaw();
       //  OriginalDataBase db = new OriginalDataBase();
 
         System.out.println("Algorithms version: "+ db.toString());
@@ -133,13 +120,15 @@ public class PowerLawTestTrec3 {
             double scannedPercent =  ((double)(scanned)) /((double)db.getElements().size() * (double)testSeqSize);
             System.out.print("K = "+k+" Attepts = " + a+ "\trecall = "+recall + "\tScaned% = " + scannedPercent + "\n");
             
-            int degrees[] = TestLib.getDegreeDistribution(db.getElements()); 
-            
-            for (int degree  = 0; degree < degrees.length; degree++) {
-                System.out.println(String.valueOf(degree) + ";" + degrees[degree] + ";");
-            }
             
             
+            
+        } //different attempts
+        
+        int degrees[] = TestLib.getDegreeDistribution(db.getElements()); 
+        for (int degree  = 0; degree < degrees.length; degree++) {
+            if (degrees[degree] > 0)
+                System.out.println(String.valueOf(degree) + '\t' + degrees[degree] );
         }
 
     }
@@ -165,7 +154,7 @@ public class PowerLawTestTrec3 {
                 if (answer.contains(ee)) good++;
             }
 
-            return new TestResult(good, result.getViewedList().size(), result.getViewedList().size(), result.getVisitedSet());
+            return new TestResult(good, result.getViewedList().size(), result.getSteps(), result.getVisitedSet());
 
         }
     }
