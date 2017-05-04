@@ -1,0 +1,122 @@
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=1000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.0935	Avg Scanned	93.5
+NN=4K = 5 Attepts = 2	recall = 0.9066666666666666	ScanedPercent = 0.1659	Avg Scanned	165.9
+NN=4K = 5 Attepts = 3	recall = 0.96	ScanedPercent = 0.2617333333333333	Avg Scanned	261.73333333333335
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=5000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 0.9466666666666667	ScanedPercent = 0.025786666666666666	Avg Scanned	128.93333333333334
+NN=4K = 5 Attepts = 2	recall = 0.9466666666666667	ScanedPercent = 0.06184666666666667	Avg Scanned	309.23333333333335
+NN=4K = 5 Attepts = 3	recall = 0.9733333333333334	ScanedPercent = 0.07558666666666666	Avg Scanned	377.93333333333334
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=10000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.015806666666666667	Avg Scanned	158.06666666666666
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.028526666666666665	Avg Scanned	285.26666666666665
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.04612	Avg Scanned	461.2
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=50000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 0.94	ScanedPercent = 0.00497	Avg Scanned	248.5
+NN=4K = 5 Attepts = 2	recall = 0.9733333333333334	ScanedPercent = 0.011576	Avg Scanned	578.8
+NN=4K = 5 Attepts = 3	recall = 0.92	ScanedPercent = 0.019584	Avg Scanned	979.2
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=100000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.0026873333333333332	Avg Scanned	268.73333333333335
+NN=4K = 5 Attepts = 2	recall = 0.9466666666666667	ScanedPercent = 0.0066103333333333335	Avg Scanned	661.0333333333333
+NN=4K = 5 Attepts = 3	recall = 0.9733333333333334	ScanedPercent = 0.010735666666666666	Avg Scanned	1073.5666666666666
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=1000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.09646666666666667	Avg Scanned	96.46666666666667
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.18346666666666667	Avg Scanned	183.46666666666667
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.25083333333333335	Avg Scanned	250.83333333333334
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=5000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.029493333333333333	Avg Scanned	147.46666666666667
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.06050666666666667	Avg Scanned	302.53333333333336
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.09338	Avg Scanned	466.9
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=10000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.015236666666666667	Avg Scanned	152.36666666666667
+NN=4K = 5 Attepts = 2	recall = 0.9466666666666667	ScanedPercent = 0.03588	Avg Scanned	358.8
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.04227	Avg Scanned	422.7
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=50000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 0.9333333333333333	ScanedPercent = 0.0051	Avg Scanned	255.0
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.012080666666666667	Avg Scanned	604.0333333333333
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.019556666666666667	Avg Scanned	977.8333333333334
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=100000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.002494333333333333	Avg Scanned	249.43333333333334
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.006815333333333333	Avg Scanned	681.5333333333333
+NN=4K = 5 Attepts = 3	recall = 0.9733333333333334	ScanedPercent = 0.010796333333333333	Avg Scanned	1079.6333333333334
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=500000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 0.8666666666666667	ScanedPercent = 7.353333333333333E-4	Avg Scanned	367.6666666666667
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.0020914	Avg Scanned	1045.7
+NN=4K = 5 Attepts = 3	recall = 0.92	ScanedPercent = 0.0034104666666666668	Avg Scanned	1705.2333333333333
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=1000000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 0.9333333333333333	ScanedPercent = 3.835E-4	Avg Scanned	383.5
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.0012211333333333333	Avg Scanned	1221.1333333333334
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.0018033333333333334	Avg Scanned	1803.3333333333333
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=1000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.10263333333333333	Avg Scanned	102.63333333333334
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.1854	Avg Scanned	185.4
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.26466666666666666	Avg Scanned	264.6666666666667
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=5000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.029433333333333332	Avg Scanned	147.16666666666666
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.06028666666666667	Avg Scanned	301.43333333333334
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.09334666666666666	Avg Scanned	466.73333333333335
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=10000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.014066666666666667	Avg Scanned	140.66666666666666
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.032236666666666663	Avg Scanned	322.3666666666667
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.04877666666666667	Avg Scanned	487.76666666666665
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=50000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 0.9666666666666667	ScanedPercent = 0.005017333333333334	Avg Scanned	250.86666666666667
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.012644	Avg Scanned	632.2
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.020314	Avg Scanned	1015.7
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=1000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.08753333333333334	Avg Scanned	87.53333333333333
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.1732	Avg Scanned	173.2
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.25096666666666667	Avg Scanned	250.96666666666667
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=5000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.02686	Avg Scanned	134.3
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.07066	Avg Scanned	353.3
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.0884	Avg Scanned	442.0
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=10000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.015096666666666666	Avg Scanned	150.96666666666667
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.03135333333333333	Avg Scanned	313.53333333333336
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.049043333333333335	Avg Scanned	490.43333333333334
+nn=4 k=5 initAttemps=1 minAttempts=1 maxAttempts=3 dataBaseSize=1000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 0.7733333333333333	ScanedPercent = 0.08373333333333334	Avg Scanned	83.73333333333333
+NN=4K = 5 Attepts = 2	recall = 0.96	ScanedPercent = 0.14433333333333334	Avg Scanned	144.33333333333334
+NN=4K = 5 Attepts = 3	recall = 0.9133333333333333	ScanedPercent = 0.2241	Avg Scanned	224.1
+nn=4 k=5 initAttemps=1 minAttempts=1 maxAttempts=3 dataBaseSize=5000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 0.7933333333333333	ScanedPercent = 0.025566666666666668	Avg Scanned	127.83333333333333
+NN=4K = 5 Attepts = 2	recall = 0.8733333333333333	ScanedPercent = 0.05592	Avg Scanned	279.6
+NN=4K = 5 Attepts = 3	recall = 0.9666666666666667	ScanedPercent = 0.07398666666666667	Avg Scanned	369.93333333333334
+nn=4 k=5 initAttemps=1 minAttempts=1 maxAttempts=3 dataBaseSize=10000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 0.7466666666666667	ScanedPercent = 0.012616666666666667	Avg Scanned	126.16666666666667
+NN=4K = 5 Attepts = 2	recall = 0.9533333333333334	ScanedPercent = 0.032016666666666665	Avg Scanned	320.1666666666667
+NN=4K = 5 Attepts = 3	recall = 0.9933333333333333	ScanedPercent = 0.042096666666666664	Avg Scanned	420.96666666666664
+nn=4 k=5 initAttemps=1 minAttempts=1 maxAttempts=3 dataBaseSize=50000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 0.5133333333333333	ScanedPercent = 0.003634	Avg Scanned	181.7
+NN=4K = 5 Attepts = 2	recall = 0.72	ScanedPercent = 0.008972666666666667	Avg Scanned	448.6333333333333
+NN=4K = 5 Attepts = 3	recall = 0.8133333333333334	ScanedPercent = 0.014661333333333334	Avg Scanned	733.0666666666667
+nn=4 k=5 initAttemps=1 minAttempts=1 maxAttempts=3 dataBaseSize=100000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 0.5133333333333333	ScanedPercent = 0.0019376666666666667	Avg Scanned	193.76666666666668
+NN=4K = 5 Attepts = 2	recall = 0.7466666666666667	ScanedPercent = 0.004205	Avg Scanned	420.5
+NN=4K = 5 Attepts = 3	recall = 0.8733333333333333	ScanedPercent = 0.006772333333333333	Avg Scanned	677.2333333333333
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=1000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.09113333333333333	Avg Scanned	91.13333333333334
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.16953333333333334	Avg Scanned	169.53333333333333
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.25816666666666666	Avg Scanned	258.1666666666667
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=5000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.029806666666666665	Avg Scanned	149.03333333333333
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.06995333333333334	Avg Scanned	349.76666666666665
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.09388666666666666	Avg Scanned	469.43333333333334
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=10000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 1.0	ScanedPercent = 0.014573333333333334	Avg Scanned	145.73333333333332
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.035563333333333336	Avg Scanned	355.6333333333333
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.04761666666666667	Avg Scanned	476.1666666666667
+nn=4 k=5 initAttemps=3 minAttempts=1 maxAttempts=3 dataBaseSize=50000 querySetSize=50 testSeqSize=30
+NN=4K = 5 Attepts = 1	recall = 0.9666666666666667	ScanedPercent = 0.005120666666666667	Avg Scanned	256.03333333333336
+NN=4K = 5 Attepts = 2	recall = 1.0	ScanedPercent = 0.012459333333333333	Avg Scanned	622.9666666666667
+NN=4K = 5 Attepts = 3	recall = 1.0	ScanedPercent = 0.019763333333333334	Avg Scanned	988.1666666666666
+nn=4 k=5 initAttemps=1 maxAttempts=3 dataBaseSize=5000 querySetSize=50 testSeqSize=30
+NN=4K = 5	recall = 1.0	ScanedPercent = 0.01892	Avg Scanned	94.6
+nn=4 k=5 initAttemps=1 maxAttempts=3 dataBaseSize=50000 querySetSize=50 testSeqSize=30
+NN=4K = 5	recall = 0.62	ScanedPercent = 0.0020766666666666668	Avg Scanned	103.83333333333333
+nn=4 k=5 initAttemps=1 maxAttempts=3 dataBaseSize=5000 querySetSize=50 testSeqSize=30
+NN=4K = 5	recall = 1.0	ScanedPercent = 0.01712	Avg Scanned	85.6
+nn=4 k=5 initAttemps=1 maxAttempts=3 dataBaseSize=50000 querySetSize=50 testSeqSize=30
+NN=4K = 5	recall = 0.66	ScanedPercent = 0.00217	Avg Scanned	108.5
+nn=4 k=5 initAttemps=1 maxAttempts=3 dataBaseSize=500000 querySetSize=50 testSeqSize=30
+NN=4K = 5	recall = 0.19333333333333333	ScanedPercent = 1.7033333333333334E-4	Avg Scanned	85.16666666666667

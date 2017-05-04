@@ -1,0 +1,165 @@
+nn=20 k=5 initAttemps=4 minAttempts=1 maxAttempts=10 dataBaseSize=1000 querySetSize=50
+NN 20 K 5 Attepts 1 recall 0.932 ScanedPercent 0.32536 AvgScanned 325.36 AvgSteps 8.5
+NN 20 K 5 Attepts 2 recall 0.96 ScanedPercent 0.49036 AvgScanned 490.36 AvgSteps 16.96
+NN 20 K 5 Attepts 3 recall 0.976 ScanedPercent 0.63922 AvgScanned 639.22 AvgSteps 26.8
+NN 20 K 5 Attepts 4 recall 0.988 ScanedPercent 0.72956 AvgScanned 729.56 AvgSteps 36.06
+NN 20 K 5 Attepts 5 recall 0.988 ScanedPercent 0.79258 AvgScanned 792.58 AvgSteps 44.5
+NN 20 K 5 Attepts 6 recall 0.996 ScanedPercent 0.83392 AvgScanned 833.92 AvgSteps 51.44
+NN 20 K 5 Attepts 7 recall 0.992 ScanedPercent 0.8657 AvgScanned 865.7 AvgSteps 60.58
+NN 20 K 5 Attepts 8 recall 0.988 ScanedPercent 0.88658 AvgScanned 886.58 AvgSteps 64.26
+NN 20 K 5 Attepts 9 recall 0.992 ScanedPercent 0.91082 AvgScanned 910.82 AvgSteps 71.94
+NN 20 K 5 Attepts 10 recall 0.992 ScanedPercent 0.91828 AvgScanned 918.28 AvgSteps 77.22
+nn=20 k=5 initAttemps=10 minAttempts=1 maxAttempts=10 dataBaseSize=1000 querySetSize=50
+NN 20 K 5 Attepts 1 recall 0.94 ScanedPercent 0.32372 AvgScanned 323.72 AvgSteps 8.38
+NN 20 K 5 Attepts 2 recall 0.972 ScanedPercent 0.49854 AvgScanned 498.54 AvgSteps 17.86
+NN 20 K 5 Attepts 3 recall 0.98 ScanedPercent 0.6181 AvgScanned 618.1 AvgSteps 26.84
+NN 20 K 5 Attepts 4 recall 0.988 ScanedPercent 0.71078 AvgScanned 710.78 AvgSteps 34.88
+NN 20 K 5 Attepts 5 recall 0.988 ScanedPercent 0.79312 AvgScanned 793.12 AvgSteps 44.46
+NN 20 K 5 Attepts 6 recall 0.988 ScanedPercent 0.82148 AvgScanned 821.48 AvgSteps 51.0
+NN 20 K 5 Attepts 7 recall 0.992 ScanedPercent 0.86622 AvgScanned 866.22 AvgSteps 58.66
+NN 20 K 5 Attepts 8 recall 0.996 ScanedPercent 0.87802 AvgScanned 878.02 AvgSteps 64.64
+NN 20 K 5 Attepts 9 recall 0.996 ScanedPercent 0.90154 AvgScanned 901.54 AvgSteps 71.1
+NN 20 K 5 Attepts 10 recall 0.996 ScanedPercent 0.9319 AvgScanned 931.9 AvgSteps 76.9
+nn=25 k=5 initAttemps=4 minAttempts=1 maxAttempts=10 dataBaseSize=1000 querySetSize=50
+NN 25 K 5 Attepts 1 recall 0.932 ScanedPercent 0.36716 AvgScanned 367.16 AvgSteps 8.26
+NN 25 K 5 Attepts 2 recall 0.964 ScanedPercent 0.5831 AvgScanned 583.1 AvgSteps 17.4
+NN 25 K 5 Attepts 3 recall 0.98 ScanedPercent 0.70048 AvgScanned 700.48 AvgSteps 26.42
+NN 25 K 5 Attepts 4 recall 0.988 ScanedPercent 0.79932 AvgScanned 799.32 AvgSteps 35.74
+NN 25 K 5 Attepts 5 recall 0.996 ScanedPercent 0.83084 AvgScanned 830.84 AvgSteps 42.7
+NN 25 K 5 Attepts 6 recall 0.996 ScanedPercent 0.88726 AvgScanned 887.26 AvgSteps 51.32
+NN 25 K 5 Attepts 7 recall 0.996 ScanedPercent 0.90378 AvgScanned 903.78 AvgSteps 55.18
+NN 25 K 5 Attepts 8 recall 0.996 ScanedPercent 0.9256 AvgScanned 925.6 AvgSteps 63.18
+NN 25 K 5 Attepts 9 recall 0.98 ScanedPercent 0.94244 AvgScanned 942.44 AvgSteps 69.6
+NN 25 K 5 Attepts 10 recall 1.0 ScanedPercent 0.95264 AvgScanned 952.64 AvgSteps 73.8
+nn=20 k=5 initAttemps=4 minAttempts=1 maxAttempts=10 dataBaseSize=1000 querySetSize=100
+NN 20 K 5 Attepts 1 recall 0.934 ScanedPercent 0.30993 AvgScanned 309.93 AvgSteps 8.29
+NN 20 K 5 Attepts 2 recall 0.968 ScanedPercent 0.50497 AvgScanned 504.97 AvgSteps 17.41
+NN 20 K 5 Attepts 3 recall 0.982 ScanedPercent 0.65338 AvgScanned 653.38 AvgSteps 26.97
+NN 20 K 5 Attepts 4 recall 0.992 ScanedPercent 0.73306 AvgScanned 733.06 AvgSteps 35.64
+NN 20 K 5 Attepts 5 recall 0.992 ScanedPercent 0.78563 AvgScanned 785.63 AvgSteps 43.77
+NN 20 K 5 Attepts 6 recall 0.996 ScanedPercent 0.83334 AvgScanned 833.34 AvgSteps 50.94
+NN 20 K 5 Attepts 7 recall 0.998 ScanedPercent 0.87385 AvgScanned 873.85 AvgSteps 58.95
+NN 20 K 5 Attepts 8 recall 0.996 ScanedPercent 0.89451 AvgScanned 894.51 AvgSteps 65.35
+NN 20 K 5 Attepts 9 recall 0.998 ScanedPercent 0.9109 AvgScanned 910.9 AvgSteps 71.37
+NN 20 K 5 Attepts 10 recall 1.0 ScanedPercent 0.9214 AvgScanned 921.4 AvgSteps 75.77
+nn=20 k=5 initAttemps=4 minAttempts=1 maxAttempts=10 dataBaseSize=5000 querySetSize=100
+NN 20 K 5 Attepts 1 recall 0.896 ScanedPercent 0.088708 AvgScanned 443.54 AvgSteps 9.65
+NN 20 K 5 Attepts 2 recall 0.944 ScanedPercent 0.163634 AvgScanned 818.17 AvgSteps 20.33
+NN 20 K 5 Attepts 3 recall 0.958 ScanedPercent 0.217488 AvgScanned 1087.44 AvgSteps 30.67
+NN 20 K 5 Attepts 4 recall 0.972 ScanedPercent 0.281922 AvgScanned 1409.61 AvgSteps 40.74
+NN 20 K 5 Attepts 5 recall 0.98 ScanedPercent 0.331526 AvgScanned 1657.63 AvgSteps 51.25
+NN 20 K 5 Attepts 6 recall 0.98 ScanedPercent 0.382388 AvgScanned 1911.94 AvgSteps 63.04
+NN 20 K 5 Attepts 7 recall 0.978 ScanedPercent 0.417596 AvgScanned 2087.98 AvgSteps 71.7
+NN 20 K 5 Attepts 8 recall 0.986 ScanedPercent 0.44844 AvgScanned 2242.2 AvgSteps 80.64
+NN 20 K 5 Attepts 9 recall 0.986 ScanedPercent 0.495954 AvgScanned 2479.77 AvgSteps 91.78
+NN 20 K 5 Attepts 10 recall 0.99 ScanedPercent 0.518748 AvgScanned 2593.74 AvgSteps 101.33
+nn=20 k=5 initAttemps=4 minAttempts=1 maxAttempts=10 dataBaseSize=10000 querySetSize=100
+NN 20 K 5 Attepts 1 recall 0.888 ScanedPercent 0.048598 AvgScanned 485.98 AvgSteps 9.88
+NN 20 K 5 Attepts 2 recall 0.924 ScanedPercent 0.089662 AvgScanned 896.62 AvgSteps 20.19
+NN 20 K 5 Attepts 3 recall 0.962 ScanedPercent 0.137602 AvgScanned 1376.02 AvgSteps 32.06
+NN 20 K 5 Attepts 4 recall 0.946 ScanedPercent 0.177465 AvgScanned 1774.65 AvgSteps 43.19
+NN 20 K 5 Attepts 5 recall 0.972 ScanedPercent 0.205422 AvgScanned 2054.22 AvgSteps 53.82
+NN 20 K 5 Attepts 6 recall 0.968 ScanedPercent 0.241549 AvgScanned 2415.49 AvgSteps 65.47
+NN 20 K 5 Attepts 7 recall 0.976 ScanedPercent 0.267957 AvgScanned 2679.57 AvgSteps 73.48
+NN 20 K 5 Attepts 8 recall 0.978 ScanedPercent 0.299151 AvgScanned 2991.51 AvgSteps 86.19
+NN 20 K 5 Attepts 9 recall 0.978 ScanedPercent 0.319552 AvgScanned 3195.52 AvgSteps 96.25
+NN 20 K 5 Attepts 10 recall 0.982 ScanedPercent 0.35561 AvgScanned 3556.1 AvgSteps 108.28
+nn=20 k=5 initAttemps=4 minAttempts=1 maxAttempts=10 dataBaseSize=50000 querySetSize=100
+NN 20 K 5 Attepts 1 recall 0.8 ScanedPercent 0.0129862 AvgScanned 649.31 AvgSteps 11.12
+NN 20 K 5 Attepts 2 recall 0.908 ScanedPercent 0.0264104 AvgScanned 1320.52 AvgSteps 22.64
+NN 20 K 5 Attepts 3 recall 0.936 ScanedPercent 0.0419524 AvgScanned 2097.62 AvgSteps 36.52
+NN 20 K 5 Attepts 4 recall 0.954 ScanedPercent 0.0506784 AvgScanned 2533.92 AvgSteps 46.89
+NN 20 K 5 Attepts 5 recall 0.96 ScanedPercent 0.061814 AvgScanned 3090.7 AvgSteps 60.24
+NN 20 K 5 Attepts 6 recall 0.958 ScanedPercent 0.0723398 AvgScanned 3616.99 AvgSteps 71.34
+NN 20 K 5 Attepts 7 recall 0.958 ScanedPercent 0.0865542 AvgScanned 4327.71 AvgSteps 84.8
+NN 20 K 5 Attepts 8 recall 0.958 ScanedPercent 0.0939788 AvgScanned 4698.94 AvgSteps 96.27
+NN 20 K 5 Attepts 9 recall 0.972 ScanedPercent 0.102928 AvgScanned 5146.4 AvgSteps 107.78
+NN 20 K 5 Attepts 10 recall 0.968 ScanedPercent 0.1109802 AvgScanned 5549.01 AvgSteps 118.22
+nn=20 k=5 initAttemps=4 minAttempts=1 maxAttempts=10 dataBaseSize=100000 querySetSize=100
+NN 20 K 5 Attepts 1 recall 0.664 ScanedPercent 0.0074828 AvgScanned 748.28 AvgSteps 11.89
+NN 20 K 5 Attepts 2 recall 0.852 ScanedPercent 0.0137798 AvgScanned 1377.98 AvgSteps 24.34
+NN 20 K 5 Attepts 3 recall 0.884 ScanedPercent 0.0211864 AvgScanned 2118.64 AvgSteps 36.54
+NN 20 K 5 Attepts 4 recall 0.932 ScanedPercent 0.0274808 AvgScanned 2748.08 AvgSteps 49.11
+NN 20 K 5 Attepts 5 recall 0.928 ScanedPercent 0.0346088 AvgScanned 3460.88 AvgSteps 62.25
+NN 20 K 5 Attepts 6 recall 0.936 ScanedPercent 0.0389949 AvgScanned 3899.49 AvgSteps 73.26
+NN 20 K 5 Attepts 7 recall 0.952 ScanedPercent 0.046024 AvgScanned 4602.4 AvgSteps 87.03
+NN 20 K 5 Attepts 8 recall 0.946 ScanedPercent 0.0518309 AvgScanned 5183.09 AvgSteps 100.41
+NN 20 K 5 Attepts 9 recall 0.962 ScanedPercent 0.0563152 AvgScanned 5631.52 AvgSteps 112.72
+NN 20 K 5 Attepts 10 recall 0.968 ScanedPercent 0.0636815 AvgScanned 6368.15 AvgSteps 124.79
+nn=20 k=5 initAttemps=4 minAttempts=1 maxAttempts=10 dataBaseSize=602 querySetSize=100
+NN 20 K 5 Attepts 1 recall 0.668 ScanedPercent 0.4558970099667774 AvgScanned 274.45 AvgSteps 9.29
+NN 20 K 5 Attepts 2 recall 0.818 ScanedPercent 0.6785215946843853 AvgScanned 408.47 AvgSteps 20.02
+NN 20 K 5 Attepts 3 recall 0.886 ScanedPercent 0.7916279069767442 AvgScanned 476.56 AvgSteps 29.63
+NN 20 K 5 Attepts 4 recall 0.926 ScanedPercent 0.8627242524916944 AvgScanned 519.36 AvgSteps 37.81
+NN 20 K 5 Attepts 5 recall 0.938 ScanedPercent 0.8951495016611296 AvgScanned 538.88 AvgSteps 42.76
+NN 20 K 5 Attepts 6 recall 0.936 ScanedPercent 0.9045182724252492 AvgScanned 544.52 AvgSteps 46.68
+NN 20 K 5 Attepts 7 recall 0.962 ScanedPercent 0.9231229235880398 AvgScanned 555.72 AvgSteps 49.5
+NN 20 K 5 Attepts 8 recall 0.966 ScanedPercent 0.9422591362126246 AvgScanned 567.24 AvgSteps 55.05
+NN 20 K 5 Attepts 9 recall 0.966 ScanedPercent 0.9509302325581396 AvgScanned 572.46 AvgSteps 57.16
+NN 20 K 5 Attepts 10 recall 0.962 ScanedPercent 0.9509800664451827 AvgScanned 572.49 AvgSteps 58.74
+nn=20 k=5 initAttemps=4 minAttempts=1 maxAttempts=10 dataBaseSize=1000 querySetSize=100
+NN 20 K 5 Attepts 1 recall 0.596 ScanedPercent 0.33139 AvgScanned 331.39 AvgSteps 9.78
+NN 20 K 5 Attepts 2 recall 0.75 ScanedPercent 0.52461 AvgScanned 524.61 AvgSteps 20.39
+NN 20 K 5 Attepts 3 recall 0.84 ScanedPercent 0.66343 AvgScanned 663.43 AvgSteps 31.72
+NN 20 K 5 Attepts 4 recall 0.89 ScanedPercent 0.74884 AvgScanned 748.84 AvgSteps 41.48
+NN 20 K 5 Attepts 5 recall 0.906 ScanedPercent 0.80909 AvgScanned 809.09 AvgSteps 51.08
+NN 20 K 5 Attepts 6 recall 0.94 ScanedPercent 0.84215 AvgScanned 842.15 AvgSteps 58.74
+NN 20 K 5 Attepts 7 recall 0.938 ScanedPercent 0.88044 AvgScanned 880.44 AvgSteps 66.04
+NN 20 K 5 Attepts 8 recall 0.958 ScanedPercent 0.89736 AvgScanned 897.36 AvgSteps 71.13
+NN 20 K 5 Attepts 9 recall 0.964 ScanedPercent 0.90994 AvgScanned 909.94 AvgSteps 75.97
+NN 20 K 5 Attepts 10 recall 0.952 ScanedPercent 0.91953 AvgScanned 919.53 AvgSteps 80.62
+nn=20 k=5 initAttemps=4 minAttempts=1 maxAttempts=10 dataBaseSize=5000 querySetSize=100
+NN 20 K 5 Attepts 1 recall 0.5 ScanedPercent 0.088726 AvgScanned 443.63 AvgSteps 10.72
+NN 20 K 5 Attepts 2 recall 0.64 ScanedPercent 0.178138 AvgScanned 890.69 AvgSteps 23.28
+NN 20 K 5 Attepts 3 recall 0.718 ScanedPercent 0.239054 AvgScanned 1195.27 AvgSteps 33.89
+NN 20 K 5 Attepts 4 recall 0.75 ScanedPercent 0.29619 AvgScanned 1480.95 AvgSteps 46.38
+NN 20 K 5 Attepts 5 recall 0.81 ScanedPercent 0.35566 AvgScanned 1778.3 AvgSteps 59.25
+NN 20 K 5 Attepts 6 recall 0.818 ScanedPercent 0.39797 AvgScanned 1989.85 AvgSteps 69.56
+NN 20 K 5 Attepts 7 recall 0.84 ScanedPercent 0.436344 AvgScanned 2181.72 AvgSteps 80.62
+NN 20 K 5 Attepts 8 recall 0.846 ScanedPercent 0.475976 AvgScanned 2379.88 AvgSteps 93.98
+NN 20 K 5 Attepts 9 recall 0.85 ScanedPercent 0.51536 AvgScanned 2576.8 AvgSteps 105.43
+NN 20 K 5 Attepts 10 recall 0.888 ScanedPercent 0.539796 AvgScanned 2698.98 AvgSteps 114.02
+nn=20 k=5 initAttemps=4 minAttempts=1 maxAttempts=10 dataBaseSize=1000 querySetSize=100
+NN 20 K 5 Attepts 1 recall 0.656 ScanedPercent 0.32967 AvgScanned 329.67 AvgSteps 9.17
+NN 20 K 5 Attepts 2 recall 0.826 ScanedPercent 0.51413 AvgScanned 514.13 AvgSteps 19.23
+NN 20 K 5 Attepts 3 recall 0.882 ScanedPercent 0.62503 AvgScanned 625.03 AvgSteps 28.56
+NN 20 K 5 Attepts 4 recall 0.932 ScanedPercent 0.71867 AvgScanned 718.67 AvgSteps 38.84
+NN 20 K 5 Attepts 5 recall 0.938 ScanedPercent 0.7855 AvgScanned 785.5 AvgSteps 48.28
+NN 20 K 5 Attepts 6 recall 0.954 ScanedPercent 0.83562 AvgScanned 835.62 AvgSteps 56.08
+NN 20 K 5 Attepts 7 recall 0.962 ScanedPercent 0.86259 AvgScanned 862.59 AvgSteps 63.66
+NN 20 K 5 Attepts 8 recall 0.966 ScanedPercent 0.88255 AvgScanned 882.55 AvgSteps 68.66
+NN 20 K 5 Attepts 9 recall 0.968 ScanedPercent 0.90829 AvgScanned 908.29 AvgSteps 75.53
+NN 20 K 5 Attepts 10 recall 0.976 ScanedPercent 0.91351 AvgScanned 913.51 AvgSteps 79.1
+nn=20 k=5 initAttemps=4 minAttempts=1 maxAttempts=10 dataBaseSize=5000 querySetSize=100
+NN 20 K 5 Attepts 1 recall 0.536 ScanedPercent 0.088582 AvgScanned 442.91 AvgSteps 10.54
+NN 20 K 5 Attepts 2 recall 0.694 ScanedPercent 0.157004 AvgScanned 785.02 AvgSteps 20.91
+NN 20 K 5 Attepts 3 recall 0.784 ScanedPercent 0.221644 AvgScanned 1108.22 AvgSteps 31.92
+NN 20 K 5 Attepts 4 recall 0.806 ScanedPercent 0.27896 AvgScanned 1394.8 AvgSteps 42.52
+NN 20 K 5 Attepts 5 recall 0.85 ScanedPercent 0.316418 AvgScanned 1582.09 AvgSteps 52.0
+NN 20 K 5 Attepts 6 recall 0.882 ScanedPercent 0.37156 AvgScanned 1857.8 AvgSteps 62.79
+NN 20 K 5 Attepts 7 recall 0.886 ScanedPercent 0.412428 AvgScanned 2062.14 AvgSteps 73.75
+NN 20 K 5 Attepts 8 recall 0.908 ScanedPercent 0.440638 AvgScanned 2203.19 AvgSteps 83.34
+NN 20 K 5 Attepts 9 recall 0.906 ScanedPercent 0.482152 AvgScanned 2410.76 AvgSteps 93.57
+NN 20 K 5 Attepts 10 recall 0.912 ScanedPercent 0.511286 AvgScanned 2556.43 AvgSteps 103.95
+nn=20 k=5 initAttemps=4 minAttempts=1 maxAttempts=10 dataBaseSize=1000 querySetSize=100
+NN 20 K 5 Attepts 1 recall 0.732 ScanedPercent 0.34139 AvgScanned 341.39 AvgSteps 9.59
+NN 20 K 5 Attepts 2 recall 0.806 ScanedPercent 0.51403 AvgScanned 514.03 AvgSteps 18.29
+NN 20 K 5 Attepts 3 recall 0.862 ScanedPercent 0.62833 AvgScanned 628.33 AvgSteps 27.56
+NN 20 K 5 Attepts 4 recall 0.91 ScanedPercent 0.71475 AvgScanned 714.75 AvgSteps 37.09
+NN 20 K 5 Attepts 5 recall 0.938 ScanedPercent 0.78774 AvgScanned 787.74 AvgSteps 47.27
+NN 20 K 5 Attepts 6 recall 0.958 ScanedPercent 0.83091 AvgScanned 830.91 AvgSteps 55.36
+NN 20 K 5 Attepts 7 recall 0.958 ScanedPercent 0.86808 AvgScanned 868.08 AvgSteps 62.0
+NN 20 K 5 Attepts 8 recall 0.966 ScanedPercent 0.88605 AvgScanned 886.05 AvgSteps 68.09
+NN 20 K 5 Attepts 9 recall 0.976 ScanedPercent 0.90461 AvgScanned 904.61 AvgSteps 74.07
+NN 20 K 5 Attepts 10 recall 0.968 ScanedPercent 0.91872 AvgScanned 918.72 AvgSteps 78.34
+nn=20 k=5 initAttemps=4 minAttempts=1 maxAttempts=10 dataBaseSize=5000 querySetSize=100
+NN 20 K 5 Attepts 1 recall 0.476 ScanedPercent 0.091882 AvgScanned 459.41 AvgSteps 10.4
+NN 20 K 5 Attepts 2 recall 0.682 ScanedPercent 0.155302 AvgScanned 776.51 AvgSteps 20.7
+NN 20 K 5 Attepts 3 recall 0.764 ScanedPercent 0.219122 AvgScanned 1095.61 AvgSteps 31.41
+NN 20 K 5 Attepts 4 recall 0.81 ScanedPercent 0.282656 AvgScanned 1413.28 AvgSteps 42.75
+NN 20 K 5 Attepts 5 recall 0.856 ScanedPercent 0.325226 AvgScanned 1626.13 AvgSteps 52.35
+NN 20 K 5 Attepts 6 recall 0.86 ScanedPercent 0.363492 AvgScanned 1817.46 AvgSteps 61.33
+NN 20 K 5 Attepts 7 recall 0.87 ScanedPercent 0.407552 AvgScanned 2037.76 AvgSteps 71.72
+NN 20 K 5 Attepts 8 recall 0.902 ScanedPercent 0.440894 AvgScanned 2204.47 AvgSteps 81.61
+NN 20 K 5 Attepts 9 recall 0.9 ScanedPercent 0.479946 AvgScanned 2399.73 AvgSteps 92.22
+NN 20 K 5 Attepts 10 recall 0.93 ScanedPercent 0.513188 AvgScanned 2565.94 AvgSteps 101.86

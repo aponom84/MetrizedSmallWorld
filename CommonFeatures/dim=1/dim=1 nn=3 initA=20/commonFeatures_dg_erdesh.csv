@@ -1,0 +1,24 @@
+Algorithm:	ErdeshRandomGraph p: 6.000060000600006E-5
+Degree;Fraction;
+1;1491
+2;4479
+3;9032
+4;13354
+5;16043
+6;16113
+7;13647
+8;10449
+9;6912
+10;4056
+11;2212
+12;1105
+13;512
+14;211
+15;92
+16;29
+17;10
+18;2
+19;1
+Total link number;299507
+AvgClusteringCoeff;0.014970190836940837
+Number of Connected Components;256
