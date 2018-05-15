@@ -10,10 +10,8 @@ import org.latna.msw.MetricElement;
 import org.latna.msw.SearchResult;
 
 /**
- * One of the simplest implementation of the Metrized Small World Data Structure
- * This implementation uses nn closest elements as an approximation of Voronoi 
- * neighborhood. 
- * @author Alexander Ponomarenko aponom84@gmail.com 
+ *
+ * @author Alexander Ponomarenko 
  */
 public class Repair02 extends AbstractMetricStructure{
     //private int succeedThreshould = 5;
@@ -92,7 +90,7 @@ public class Repair02 extends AbstractMetricStructure{
 
     @Override
     public SearchResult nnSearch(MetricElement query, int attempts) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return AlgorithmLib.kSearchElementsWithAttempts(query, getProvider(), 1, attempts);
     }
 
     @Override
